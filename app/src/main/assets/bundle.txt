@@ -1,0 +1,105 @@
+texture page-0 textures/page-0.bmp
+texture page-1 textures/page-1.bmp
+
+shader sprite shaders/sprite.vert shaders/sprite.frag
+
+material world blend-none sprite page-0
+material sprites blend-alpha sprite page-1
+
+sprite background world 0 256 256 512 128 128
+sprite ground world 0 256 0 256 0 0
+
+sprite stroke-0 sprites 87 89 240 242 0 2
+sprite stroke-1 sprites 90 93 240 242 0 2
+sprite stroke-2 sprites 94 97 240 242 0 2
+sprite stroke-3 sprites 98 103 240 242 0 2
+sprite stroke-4 sprites 104 109 240 242 0 2
+sprite stroke-5 sprites 110 114 240 242 0 2
+sprite stroke-6 sprites 115 119 240 242 0 2
+sprite stroke-7 sprites 120 127 240 242 0 2
+sprite stroke-8 sprites 128 135 240 242 0 2
+
+sprite-array strokes stroke-0 stroke-1 stroke-2 stroke-3 stroke-4 stroke-5 stroke-6 stroke-7 stroke-8
+
+sprite fly-0 sprites 87 102 243 255 8 6
+sprite fly-1 sprites 103 118 243 255 8 6
+sprite fly-2 sprites 119 134 243 255 8 6
+
+sprite-array fly-anim fly-0 fly-1 fly-2
+value fly-anim-rate 10
+
+sprite death-0 sprites 204 231 14 39 11 9
+sprite death-1 sprites 204 244 40 77 18 16
+sprite death-2 sprites 152 203 29 77 24 22
+sprite death-3 sprites 94 151 25 77 27 24
+sprite death-4 sprites 1 93 8 77 46 33
+sprite death-5 sprites 1 113 78 172 56 47
+
+sprite-array death-anim death-0 death-1 death-2 death-3 death-4 death-5
+value death-anim-rate 15
+
+sprite points-0 sprites 111 122 190 211 0 10
+sprite points-1 sprites 5 13 190 211 0 10
+sprite points-2 sprites 14 25 190 211 0 10
+sprite points-3 sprites 26 37 190 211 0 10
+sprite points-4 sprites 38 49 190 211 0 10
+sprite points-5 sprites 51 62 190 211 0 10
+sprite points-6 sprites 63 74 190 211 0 10
+sprite points-7 sprites 76 86 190 211 0 10
+sprite points-8 sprites 87 98 190 211 0 10
+sprite points-9 sprites 99 110 190 211 0 10
+
+sprite result-0 sprites 114 122 173 189 0 10
+sprite result-1 sprites 7 13 173 189 0 10
+sprite result-2 sprites 17 25 173 189 0 10
+sprite result-3 sprites 29 37 173 189 0 10
+sprite result-4 sprites 40 49 173 189 0 10
+sprite result-5 sprites 54 62 173 189 0 10
+sprite result-6 sprites 66 74 173 189 0 10
+sprite result-7 sprites 78 86 173 189 0 10
+sprite result-8 sprites 90 98 173 189 0 10
+sprite result-9 sprites 102 110 173 189 0 10
+
+sprite-array points-digits points-0 points-1 points-2 points-3 points-4 points-5 points-6 points-7 points-8 points-9
+sprite-array result-digits result-0 result-1 result-2 result-3 result-4 result-5 result-6 result-7 result-8 result-9
+
+value points-align 0.5
+value points-offset-x 0
+value points-offset-y 56
+
+value result-align 0
+value result-offset-x 1
+value result-offset-y 7
+
+value best-align 0
+value best-offset-x 1
+value best-offset-y -16
+
+sprite popup sprites 123 239 78 202 58 40
+sprite new-best sprites 95 130 212 229 64 28
+
+sprite empty sprites 0 0 0 0 0 0
+sprite start sprites 1 86 234 255 42 68
+sprite repeat sprites 1 94 212 233 46 68
+
+sprite-array start-anim start start empty
+value start-anim-rate 3
+
+sprite-array repeat-anim repeat repeat empty
+value repeat-anim-rate 3
+
+value screen-width 144
+value move-velocity 50
+value back-velocity 12
+value jump-velocity 180
+value jump-angle -45
+value rotation-speed 130
+value gravity -600
+value character-x -32
+value character-radius 5
+value span-width 78
+value tube-width 26
+value bound-inner 80
+value bound-outer 128
+value hole-rect_size 48
+value hole-range 80
